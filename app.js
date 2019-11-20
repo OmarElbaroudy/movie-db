@@ -66,7 +66,6 @@ function containsUser(obj, list) {
 var addToWatchList = function(movie,list,curUser){
     var i;
     for(i = 0; i<list.length; i++){
-        //console.log(curUser)
         if(list[i].un === curUser){
             if(!list[i].watchList.includes(movie)){
                 list[i].watchList.push(movie)
@@ -75,8 +74,8 @@ var addToWatchList = function(movie,list,curUser){
                 return false;
             }    
         }
-        return true;
     }
+    return true;
 }
 
 var valid = function(un,pw){
