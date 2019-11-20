@@ -230,7 +230,7 @@ app.post('/search', function(req,res){
 
 app.post('/conjuring', function(req,res){
     let users = loadUsers()
-    addToWatchList('conjuring',users,req.session.username)
+    if(!addToWatchList('conjuring',users,req.session.username))
         res.send('conjuring is already in your watchlist!')
 })
 
@@ -265,5 +265,3 @@ app.post('/scream', function(req,res){
         res.send('scream is already in your watchlist!')
 })
 
-
-//deploy on heroku and submit
